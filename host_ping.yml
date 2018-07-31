@@ -4,3 +4,5 @@
   tasks:
     - name: gerran_test host_ping
       ping:
+      become: yes
+      become_user: root

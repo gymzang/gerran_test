@@ -1,0 +1,6 @@
+---
+- hosts: all
+  gather_facts: false
+  tasks:
+    - name: gerran_test host_ping
+      ping:

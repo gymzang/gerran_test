@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - name : test cmd
-      command : hostname 
+      command : echo "Hello Universe" >> text.log

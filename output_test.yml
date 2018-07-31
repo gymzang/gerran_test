@@ -1,0 +1,9 @@
+---
+- name : file output test
+  hosts: all
+  tasks:
+    - shell: echo "hi"
+      register: shell_result
+
+    - debug:
+        var: shell_result.stdout_lines

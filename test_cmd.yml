@@ -1,0 +1,6 @@
+- name: test cmd
+  user: root
+  hosts: linux
+  tasks:
+    - name : test cmd
+      command : hostname 

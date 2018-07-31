@@ -1,5 +1,6 @@
-- name: display multiple file contents
-  debug: var=item
-  with_file:
-    - "/root/text.log"
-    - "abcd.txt"  
+- name: test cmd
+  user: root
+  hosts: all
+  tasks:
+    - name : test cmd
+      shell : echo "Hello Universe" >> /root/text.log

@@ -1,7 +1,7 @@
-- name: test playbook
+- name: test 
   user: root
   hosts: all
   tasks:
-      - shell: /sbin/ifconfig
+      - shell: ifconfig
         ignore_errors: yes
         register: uname_result

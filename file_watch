@@ -1,0 +1,7 @@
+- debug: msg="the value of foo.txt is {{lookup('file', '/etc/text.log') }}"
+
+- name: display multiple file contents
+  debug: var=item
+  with_file:
+    - "/root/text.log"
+    - "abcd.txt"  

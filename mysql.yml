@@ -1,0 +1,13 @@
+---
+  - hosts: 192.168.0.55
+    become: true
+    tasks:
+      - copy: src=/root/mysql_test01.sql dest=/root/mysql_test01.sql
+      - name: import the database
+        mysql_db:
+          name: database
+          state: import
+          target: /root/mysql_test01.sql
+          login_host: 192.168.0.55
+          login_user: root
+          login_password: 'Tech!@#123'

@@ -3,6 +3,7 @@
     become: true
     tasks:
       - copy: src=/root/mysql_test01.sql dest=/root/mysql_test01.sql 
+      - remote_src: yes
       - name: import the database
         mysql_db:
           name: database

@@ -1,7 +1,8 @@
 ---
   - hosts: 192.168.0.55
+    become: true
     tasks:
-      - copy: src=/root/mysql_test01.sql dest=/root/mysql_test01.sql
+      - copy: src=/root/mysql_test01.sql dest=/root/mysql_test01.sql 
       - name: import the database
         mysql_db:
           name: database

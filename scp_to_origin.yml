@@ -1,0 +1,11 @@
+---
+- name: scp to origin
+  hosts: 10.160.136.24
+  tasks:
+    - name: transfer files
+      synchronize: src=/home1/irteamsu/playbook/test/ dest=/data/ftp/virtual_users/skquest/temp/test
+      delegate_to: localhost
+      register: log
+    - name: show console log
+      debug:
+        var: log

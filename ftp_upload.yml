@@ -1,0 +1,15 @@
+---
+- name: ftp upload test
+  hosts: localhost
+  tasks:
+    - name: upload files
+      shell: |
+        sftp 10.160.136.24<<EOF
+        cd /data/ftp/virtual_users/skquest/temp/
+        mput -r /home1/irteamsu/playbook/test/
+        bye
+        EOF
+      register: log
+    - name: show console log
+      debug:
+        var: log

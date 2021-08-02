@@ -1,6 +1,7 @@
 - name: test cmd
-  user: root
-  hosts: all
   tasks:
     - name : test cmd
-      shell : echo "Hello Universe" >> /root/text.log
+      script: pS.py
+
+      
+    

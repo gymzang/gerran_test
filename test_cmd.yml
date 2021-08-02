@@ -2,6 +2,3 @@
   tasks:
     - name : test cmd
       script: pS.py
-
-      
-    

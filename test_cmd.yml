@@ -1,4 +1,4 @@
 - name: test cmd
   tasks:
     - name : test cmd
-      script: pS.py
+      shell: pS.py

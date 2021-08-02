@@ -1,3 +1,4 @@
----
 - name: execute python script
-  script: pS.py
+  tasks:
+    - name : py for test
+      script: pS.py

@@ -1,5 +1,4 @@
 - name: test cmd
-  user: root
   hosts: all
   tasks:
     - name : test cmd

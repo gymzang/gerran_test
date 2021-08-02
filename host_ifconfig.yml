@@ -2,6 +2,6 @@
   user: root
   hosts: all
   tasks:
-      - shell: ifconfig
+      - shell: hostname
         ignore_errors: yes
         register: uname_result

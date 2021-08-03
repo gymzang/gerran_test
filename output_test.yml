@@ -2,7 +2,7 @@
 - name : file output test
   hosts: all
   tasks:
-    - shell: echo "hi"
+    - shell: hostname
       register: shell_result
 
     - debug:

@@ -1,12 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: DaemonSet
 metadata:
   name: my-nginx
 spec:
   selector:
     matchLabels:
       run: my-nginx
-  replicas: 6
   template:
     metadata:
       labels:
